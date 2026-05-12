@@ -36,10 +36,13 @@ try:
     a = car_dict.speed
     result1 = car_dict["origin"]  # Toyota
     print(result1)
-except AttributeError as err:
-    print(f"Attribute error: {err}")
-except KeyError as err:
-    print(f"Key not found: {err}")
+# except AttributeError as err:
+#     print(f"Attribute error: {err}")
+# except KeyError as err:
+#     print(f"Key not found: {err}")
+except Exception as err:  # umumiy xat bu hamma xatolarni qamrab oladi,
+    # lekin aniq xatolarni ushlash uchun yuqoridagi except bloklari ishlatiladi
+    print(f"An error occurred: {err}")
 else:  # agar try blockida xatolik yuz bermasa, else bloki bajariladi
     print("No error occurred")
 finally:  # har doim bajariladigan kod blokidir, xatolik yuz bermasa ham, yuz bersa ham bajariladi
