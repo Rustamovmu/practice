@@ -47,6 +47,9 @@ class Dog(Animal):  # child class
     def protect_owner(self):
         print(f"{self.name} is protecting his owner")
 
+    def make_sound(self):
+        print(f"the {self.name} can make voice: {self.sound}")
+
 
 class Cat(Animal):  # child class
     # constructor
@@ -106,3 +109,29 @@ print(dog.description)
 
 print(dog.voice, "\n", cat.voice, "\n", fish.voice)  # parent property
 print(dog.status, "\n", cat.status, "\n", fish.status)  # parent property
+
+print("=======Polymorphism========")
+# Polymorphism >> many forms
+# method overriding >> parent class methodni child classda qayta yozish
+# method overloading >> bir xil nomdagi methodni turli xil argumentlar bilan ishlatish mumkin
+# operator overloading >> operatorlarni turli xil ma'nolarda ishlatish mumkin
+
+
+dog.make_sound()
+cat.make_sound()
+fish.make_sound()
+
+print("==========")
+a = isinstance(fish, Fish)
+b = isinstance(fish, Animal)
+c = isinstance(fish, object)
+d = isinstance("MIT", object)
+result = a and b and c and d
+print(result)
+print("==========")
+data1 = issubclass(Dog, Animal)
+data2 = issubclass(Cat, Animal)
+data3 = issubclass(Fish, Animal)
+data4 = issubclass(Animal, object)
+result2 = data1 and data2 and data3 and data4
+print(result2)
