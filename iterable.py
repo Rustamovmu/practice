@@ -1,5 +1,5 @@
 print("=======Iterable objects and range========")
-# Iterable objects >> list, tuple, set, dict, string, range, file, etc
+# Iterable objects >> list, tuple, set, dict, string, zip, range, file, etc
 
 text = "MIT"
 for i in text:

@@ -88,3 +88,14 @@ def greeting(*args, **kwargs):
 
 
 greeting("Hello", "Hi", True, 10, name="Alice", age=30, city="New York")
+
+print("=======zip========")
+# zip >> zip is a built-in function that takes two or more iterables and
+# returns an iterator of tuples, where the i-th tuple contains the i-th element from each of the argument sequences
+names = ["Alice", "Bob", "Charlie"]
+ages = [30, 25, 35, 40]
+cities = ["New York", "Los Angeles", "Chicago"]
+# bunda names, ages, cities listlarining itemlari zip orqali birlashtiriladi yani
+#  [('Alice', 30, 'New York'), ('Bob', 25, 'Los Angeles'), ('Charlie', 35, 'Chicago')] chiqadi
+zipped = zip(names, ages, cities)
+print(list(zipped))
