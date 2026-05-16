@@ -108,3 +108,31 @@ numbers2 = [5, 2, 9, 1, 5, 6]
 sorted_numbers = sorted(numbers2)  # sort the list in ascending order
 print(f"the sorted numbers list is {sorted_numbers}")
 print(f"the original numbers list is {numbers2}")
+
+print("=======Lambda function========")
+# Lambda function >> lambda arguments: expression
+# Lambda function is a small anonymous function that can take any number of arguments,
+# but can only have one expression. Lambda functions are often used as a shortcut for defining simple functions.
+
+
+def calculate(x, y): return x * y
+
+
+result = calculate(5, 3)
+print(f"the result of the calculate function is {result}")
+
+print("-"*10)
+# Lambda function
+people = [
+    ("Alice", 30),
+    ("Bob", 25),
+    ("Charlie", 35)
+]
+people.sort()
+print(f"the sorted people list is {people}")
+print("-"*10)
+
+#  sorted by age via lambda function
+# sort the list of dictionaries by age
+people.sort(key=lambda person: person[1])
+print(f"the sorted people list is {people}")
