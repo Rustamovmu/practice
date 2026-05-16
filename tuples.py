@@ -58,3 +58,19 @@ def calculate(*args):
 calculate(2, 3, 4)
 print("-"*10)
 calculate(5, 6)
+
+# **kwargs === dict
+
+
+def introduce(**kwargs):
+    print("**kwargs:", kwargs)
+    print(
+        f"Hi, my name is {kwargs.get('name')}, I am {kwargs.get('age')} years old and I live in {kwargs.get('city')}")
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+    print(f"the type of kwargs: {type(kwargs)}")
+
+
+introduce(name="Alice", age=30, city="New York")
+introduce(name="Bob", age=25, city="Los Angeles",
+          profession="Developer", single=True)
