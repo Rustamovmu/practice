@@ -136,3 +136,43 @@ print("-"*10)
 # sort the list of dictionaries by age
 people.sort(key=lambda person: person[1])
 print(f"the sorted people list is {people}")
+
+print("=======enumerate, map, filter========")
+# enumerate() func is used for index & value ni bittada olish u-n ishlatamz
+animals = ["cat", "dog", "fish"]
+for i in enumerate(animals):
+    print("element:", i)
+
+print("-"*10)
+for (index, value) in enumerate(animals):
+    print(f"the index:{index} and the value:{value}")
+
+print("-"*10)
+#  similar in dictionaries
+car_obj = dict(brand="BMW", year=2026)  # dict
+result = car_obj.items()
+for (key, value) in result:
+    print(f"the key: {key} and the value: {value}")
+print("-"*10)
+# map
+cars = [
+    ("Ferrari", 78),
+    ("Toyota", 87),
+    ("Audi", 116),
+    ("BMW", 109),
+    ("Pagani", 33)
+]
+
+new_cars = []
+for car in cars:
+    new_cars.append(car[0])
+print("new_cars(1)", new_cars)
+
+result_map = map(lambda car: car[0], cars)
+new_cars = list(result_map)
+print("new_cars(2)", new_cars)
+
+print("-"*10)
+# filter()
+result_filter = filter(lambda car: car[1] > 80, cars)
+print(list(result_filter))
