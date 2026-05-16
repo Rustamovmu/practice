@@ -74,3 +74,17 @@ def introduce(**kwargs):
 introduce(name="Alice", age=30, city="New York")
 introduce(name="Bob", age=25, city="Los Angeles",
           profession="Developer", single=True)
+
+
+def greeting(*args, **kwargs):
+    print("*args:", args)
+    print("**kwargs:", kwargs)
+    print(
+        f"Hi, my name is {kwargs.get('name')}, I am {kwargs.get('age')} years old and I live in {kwargs.get('city')}")
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+    print(
+        f"the type of args: {type(args)} and the type of kwargs: {type(kwargs)}")
+
+
+greeting("Hello", "Hi", True, 10, name="Alice", age=30, city="New York")
